@@ -1,13 +1,11 @@
 import Banner from "./components/Banner";
-import LabelInput from "./components/LabelInput";
+import Formulary from "./components/Formulary";
 
 function App() {
   return (
     <div className="App">
       <Banner />
-      <LabelInput label="Nome"/>
-      <LabelInput label="Cargo"/>
-      <LabelInput label="Imagem"/>
+      <Formulary/>
     </div>
   );
 }

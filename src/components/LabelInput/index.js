@@ -1,10 +1,11 @@
 import "./LabelInput.css";
 
-const LabelInput = () => {
+const LabelInput = (props) => {
+  console.log(props.placeholder);
   return (
     <div className="label-input">
-      <label>Nome</label>
-      <input placeholder="Digite o seu nome" />
+      <label>{props.label}</label>
+      <input placeholder={props.placeholder} />
     </div>
   );
 };
