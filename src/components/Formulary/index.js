@@ -1,5 +1,6 @@
 import LabelInput from "../LabelInput";
 import DropdownDropdown from "../Dropdown";
+import Button from "../Button";
 import "./Formulary.css";
 
 const Formulary = () => {
@@ -21,6 +22,9 @@ const Formulary = () => {
         <LabelInput label="Cargo" placeholder="Digite o seu cargo" />
         <LabelInput label="Imagem" placeholder="Informe o endereço da imagem" />
         <DropdownDropdown label="Time" items={teams}/>
+        <Button>
+          Criar Card
+        </Button>
       </form>
     </section>
   );
