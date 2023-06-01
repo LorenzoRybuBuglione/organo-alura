@@ -1,11 +1,19 @@
 import "./LabelInput.css";
 
 const LabelInput = (props) => {
-  console.log(props.placeholder);
+  const onChanging = (event) => {
+    props.onTyping(event.target.value)
+  }
+
   return (
     <div className="label-input">
       <label>{props.label}</label>
-      <input placeholder={props.placeholder} required={props.required}/>
+      <input
+        value={props.value}
+        onChange={onChanging}
+        placeholder={props.placeholder}
+        required={props.required}
+      />
     </div>
   );
 };
