@@ -5,26 +5,29 @@ import "./Formulary.css";
 
 const Formulary = () => {
   const teams = [
-    'Programação',
-    'Front-End',
-    'Data-Science',
-    'DevOps',
-    'UX e Design',
-    'Mobile',
-    'Inovação e Gestão',
-  ]
+    "Programação",
+    "Front-End",
+    "Data-Science",
+    "DevOps",
+    "UX e Design",
+    "Mobile",
+    "Inovação e Gestão",
+  ];
+
+  const onCreate = (event) => {
+    event.preventDefault();
+    console.log("O card foi criado");
+  };
 
   return (
     <section className="formulary">
-      <form>
+      <form onSubmit={onCreate}>
         <h2>Preencha os dados para criar o card do colaborador.</h2>
-        <LabelInput label="Nome" placeholder="Digite o seu nome" />
-        <LabelInput label="Cargo" placeholder="Digite o seu cargo" />
+        <LabelInput label="Nome" placeholder="Digite o seu nome" required />
+        <LabelInput label="Cargo" placeholder="Digite o seu cargo" required />
         <LabelInput label="Imagem" placeholder="Informe o endereço da imagem" />
-        <DropdownDropdown label="Time" items={teams}/>
-        <Button>
-          Criar Card
-        </Button>
+        <DropdownDropdown label="Time" items={teams} required />
+        <Button>Criar Card</Button>
       </form>
     </section>
   );
