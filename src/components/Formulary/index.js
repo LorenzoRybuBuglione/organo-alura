@@ -4,7 +4,7 @@ import DropdownDropdown from "../Dropdown";
 import Button from "../Button";
 import "./Formulary.css";
 
-const Formulary = () => {
+const Formulary = (props) => {
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [image, setImage] = useState("");
@@ -22,7 +22,13 @@ const Formulary = () => {
 
   const onCreate = (event) => {
     event.preventDefault();
-    console.log("O card foi criado => ", name, role, image, team);
+    props.onCreateCard({
+      name,
+      role,
+      image,
+      team
+    })
+    
   };
 
   return (
