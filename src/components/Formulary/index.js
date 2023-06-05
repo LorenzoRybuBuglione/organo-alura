@@ -10,16 +10,6 @@ const Formulary = (props) => {
   const [image, setImage] = useState("");
   const [team, setTeam] = useState("Programação");
 
-  const teams = [
-    "Programação",
-    "Front-End",
-    "Data-Science",
-    "DevOps",
-    "UX e Design",
-    "Mobile",
-    "Inovação e Gestão",
-  ];
-
   const onCreate = (event) => {
     event.preventDefault();
     props.onCreateCard({
@@ -59,7 +49,7 @@ const Formulary = (props) => {
           value={team}
           onChange={(value) => setTeam(value)}
           label="Time"
-          items={teams}
+          items={props.teams}
           required
         />
         <Button>Criar Card</Button>
