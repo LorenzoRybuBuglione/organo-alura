@@ -49,7 +49,7 @@ const Formulary = (props) => {
           value={team}
           onChange={(value) => setTeam(value)}
           label="Time"
-          items={props.teams}
+          items={props.teamNames}
           required
         />
         <Button>Criar Card</Button>

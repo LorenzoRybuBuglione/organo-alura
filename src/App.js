@@ -25,14 +25,7 @@ function App() {
   const [workers, setWorkers] = useState([]);
 
   const onAddWorker = (newWorker) => {
-    console.log(
-      "O card foi criado => ",
-      newWorker.name,
-      newWorker.role,
-      newWorker.image,
-      newWorker.team
-    );
-    setWorkers(...workers, newWorker);
+    setWorkers([...workers, newWorker]);
   };
 
   return (
@@ -40,7 +33,7 @@ function App() {
       <Banner />
       <Formulary
         onCreateCard={(newWorker) => onAddWorker(newWorker)}
-        teams={teams.map((team) => team.name)}
+        teamNames={teams.map((team) => team.name)}
       />
       {teams.map((team) => (
         <Team
@@ -48,6 +41,7 @@ function App() {
           name={team.name}
           primaryColor={team.primaryColor}
           secundaryColor={team.secundaryColor}
+          workers={workers.filter((worker) => (worker.team === team.name))}
         />
       ))}
     </div>
