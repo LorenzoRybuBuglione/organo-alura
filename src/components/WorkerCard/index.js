@@ -6,7 +6,7 @@ const WorkerCard = (props) => {
       <div className="header">
         <img src={props.image} alt={props.name} />
       </div>
-      <div className="footer">
+      <div className="cardFooter">
         <h4>{props.name}</h4>
         <h5>{props.role}</h5>
       </div>
