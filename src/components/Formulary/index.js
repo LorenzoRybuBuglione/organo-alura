@@ -16,9 +16,12 @@ const Formulary = (props) => {
       name,
       role,
       image,
-      team
-    })
-    
+      team,
+    });
+    setName("");
+    setRole("");
+    setImage("");
+    setTeam("Programação");
   };
 
   return (
