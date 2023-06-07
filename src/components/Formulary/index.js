@@ -8,7 +8,7 @@ const Formulary = (props) => {
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [image, setImage] = useState("");
-  const [team, setTeam] = useState("Programação");
+  const [team, setTeam] = useState("");
 
   const onCreate = (event) => {
     event.preventDefault();
@@ -21,7 +21,7 @@ const Formulary = (props) => {
     setName("");
     setRole("");
     setImage("");
-    setTeam("Programação");
+    setTeam("");
   };
 
   return (
